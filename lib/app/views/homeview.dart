@@ -39,46 +39,55 @@ class HomeView extends StatelessWidget {
       ),
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Flex(
-                  direction: Axis.horizontal,
-                  children: [
-                    const CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.black,
+            Flexible(
+              flex: 1,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.black,
+                  ),
+                  Flexible(
+                    flex: 2,
+                    child: Row(
+                      children: const [
+                        Text(
+                          'Hello, ',
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87,
+                          ),
+                        ),
+                        Text(
+                          'Jeremy',
+                          style: TextStyle(
+                            fontFamily: 'Raleway',
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
-                    const Text(
-                      'Hello, ',
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        fontSize: 17,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black87,
-                      ),
-                    ),
-                    const Text(
-                      'Jeremy',
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                    IconButton(
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: IconButton(
                       onPressed: () {},
                       icon: const Icon(
                         Icons.search_outlined,
                       ),
                       iconSize: 30,
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
