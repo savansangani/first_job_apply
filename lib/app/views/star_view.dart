@@ -77,7 +77,10 @@ class StarView extends StatelessWidget {
                 child: const Text(
                   'Get Started',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 style: ButtonStyle(
                   splashFactory: NoSplash.splashFactory,
