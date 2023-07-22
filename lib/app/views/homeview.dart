@@ -1,5 +1,5 @@
 import 'package:first_job_apply/app/views/job_details.dart';
-import 'package:first_job_apply/app/views/star_view.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,10 +27,10 @@ class HomeView extends StatelessWidget {
                     radius: 25,
                     backgroundColor: Colors.black,
                   ),
-                  Flexible(
+                  const Flexible(
                     flex: 2,
                     child: Row(
-                      children: const [
+                      children: [
                         Text(
                           'Hello, ',
                           style: TextStyle(
@@ -271,7 +271,7 @@ class HomeView extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.topLeft,
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     child: const Text(
                       'Jobs',
                       style: TextStyle(
@@ -283,7 +283,7 @@ class HomeView extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.arrow_forward_ios_outlined),
+                    icon: const Icon(Icons.arrow_forward_ios_outlined),
                   ),
                 ],
               ),
@@ -347,7 +347,7 @@ class HomeView extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 33),
+                      const SizedBox(width: 33),
                       Container(
                         height: 180,
                         width: 160,
